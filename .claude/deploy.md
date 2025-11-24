@@ -1,4 +1,4 @@
-Guide the deployment workflow following strict environment rules and permission requirements. ALWAYS require explicit user permission before pushing to staging or main branches.
+Guide the deployment workflow following strict environment rules and permission requirements. Regular development commits should only be pushed to the develop branch. ALWAYS require explicit user permission before merging and pushing to staging or main branches.
 
 # Deploy Command
 

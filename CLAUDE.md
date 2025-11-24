@@ -47,7 +47,7 @@ npm run test     # Run tests
 4. Commit with reference to issue (if applicable)
 
 ### Before committing or pushing to GitHub
-**IMPORTANT:** Always check [deploy.md](./deploy.md) for deployment instructions and requirements before committing or pushing changes to GitHub. This ensures you follow proper deployment procedures and avoid issues.
+**IMPORTANT:** Always push commits to the `develop` branch only. Never push directly to `staging` or `main` branches - those are reserved for deployments through the deployment workflow. Check [deploy.md](./deploy.md) for deployment instructions and requirements.
 
 ### Running tests
 ```bash

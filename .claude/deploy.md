@@ -35,8 +35,8 @@ git diff
 
 Present options to user:
 
-- **Staging** (Preview deployment) - Deploys to Vercel preview, uses consilio-test database
-- **Production** (Live deployment) - Deploys to production, uses consilio-prod database
+- **Staging** (Preview deployment) - Deploys to Vercel preview, uses nrml-test database
+- **Production** (Live deployment) - Deploys to production, uses nrml-prod database
 - **Cancel** - Stop deployment
 
 ### Step 3: Show What Will Be Deployed
@@ -68,7 +68,7 @@ Ask user:
 > - Merge `develop` → `[staging/main]`
 > - Push to GitHub
 > - Trigger automatic Vercel deployment
-> - Use [consilio-test/consilio-prod] database
+> - Use [nrml-test/nrml-prod] database
 >
 > Type 'yes' to proceed or 'no' to cancel."
 

@@ -46,6 +46,9 @@ npm run test     # Run tests
 3. Run tests to ensure fix works and doesn't break other tests
 4. Commit with reference to issue (if applicable)
 
+### Before committing or pushing to GitHub
+**IMPORTANT:** Always push commits to the `develop` branch only. Never push directly to `staging` or `main` branches - those are reserved for deployments through the deployment workflow. Check [deploy.md](./deploy.md) for deployment instructions and requirements.
+
 ### Running tests
 ```bash
 npm run test              # Run all tests
@@ -60,6 +63,9 @@ npm run test -- --watch   # Watch mode
 - Keep components small and focused (single responsibility)
 - Use descriptive variable and function names
 - Add JSDoc comments for complex logic only
+
+### Styling Guidelines
+**IMPORTANT:** Check [styles.md](./styles.md) for instructions on how to enforce consistent styling across all components and pages in the NRML application.
 
 ## Useful Links
 

@@ -1,6 +1,6 @@
 # Design System Style Guide
 
-Use this guide to enforce consistent styling across all components and pages in the Consilio application.
+Use this guide to enforce consistent styling across all components and pages in the NRML application.
 
 ## Core Principles
 

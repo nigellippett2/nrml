@@ -10,6 +10,9 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: 'NRML',
   description: 'NRML Application',
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({

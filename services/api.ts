@@ -20,19 +20,28 @@ export const api = {
 
   /**
    * Example function to fetch data from Supabase
+   *
+   * @example
+   * // Replace 'your_table_name' with your actual table name
+   * const { data, error } = await supabase
+   *   .from('your_table_name')
+   *   .select('*')
+   *   .limit(10);
+   *
+   * @see https://supabase.com/docs/reference/javascript/select
    */
-  supabaseExample: async () => {
-    try {
-      const { data, error } = await supabase
-        .from('example_table')
-        .select('*')
-        .limit(10);
-
-      if (error) throw error;
-      return data;
-    } catch (error) {
-      console.error('Failed to fetch from Supabase:', error);
-      throw error;
-    }
-  },
+  // supabaseExample: async () => {
+  //   try {
+  //     const { data, error } = await supabase
+  //       .from('your_table_name') // TODO: Replace with your actual table name
+  //       .select('*')
+  //       .limit(10);
+  //
+  //     if (error) throw error;
+  //     return data;
+  //   } catch (error) {
+  //     console.error('Failed to fetch from Supabase:', error);
+  //     throw error;
+  //   }
+  // },
 };

@@ -172,11 +172,11 @@ After successful push, inform user:
 
 ## Environment Reference
 
-| Environment | Branch    | Supabase DB   | Vercel                   |
-| ----------- | --------- | ------------- | ------------------------ |
-| Development | `develop` | consilio-dev  | localhost:3000           |
-| Staging     | `staging` | consilio-test | Preview URL              |
-| Production  | `main`    | consilio-prod | consilio-sage.vercel.app |
+| Environment | Branch    | Supabase DB | Vercel           |
+| ----------- | --------- | ----------- | ---------------- |
+| Development | `develop` | nrml-dev    | localhost:3000   |
+| Staging     | `staging` | nrml-test   | Preview URL      |
+| Production  | `main`    | nrml-prod   | nrml.vercel.app  |
 
 ## Related Documentation
 

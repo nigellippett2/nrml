@@ -413,16 +413,38 @@ p - 8; // Very spacious (32px)
 
 ### Icon Library
 
-**Primary Icon Library**: `@untitledui/icons`
+**Primary Icon Library**: `@untitledui/icons` (v0.0.19) - 1,172+ SVG icons
+
+This is the ONLY icon library to use for NRML. All icons must come from @untitledui/icons.
 
 ```tsx
-import { Lightbulb01, Settings01, MessageChatCircle } from '@untitledui/icons';
+import { BarChart01, Target01, TrendUp01, Lock01, Users01, Zap } from '@untitledui/icons';
 
 // Usage
-<Lightbulb01 className="h-10 w-10 text-primary-400" />;
+<BarChart01 className="h-10 w-10 text-primary-400" />
 ```
 
-**Fallback for HeroIcons**: `@heroicons/react/24/outline` (navigation only)
+**Do NOT use:**
+- ❌ Emojis
+- ❌ HeroIcons or other icon libraries
+- ❌ Custom SVG icons (use untitled.ui equivalents instead)
+
+### Common NRML Icons
+
+Used throughout the application:
+
+```tsx
+BarChart01          // Initiative Assessment, Analytics, Charts
+Target01            // Prioritization Framework, Goals, Targeting
+TrendUp01           // Performance Tracking, Growth, Trends
+Lock01              // Data Security, Privacy, Protection
+Users01             // Stakeholder Management, Teams, Collaboration
+Zap                 // Execution, Energy, Quick actions
+MessageChatCircle   // Communication, Support, Chat
+Settings01          // Configuration, Preferences, Admin
+Dataflow04          // Process flows, Integration, Data
+BookOpen01          // Documentation, Learning, Resources
+```
 
 ### Icon Sizes
 
@@ -437,16 +459,12 @@ h-16 w-16 // Empty state icons
 
 ### Icon Color Guidelines
 
-#### Dashboard & Feature Icons
+#### Feature Card Icons (Most Common)
 
-Use lighter, more subtle colors for a professional appearance:
+Use primary color for featured/action icons in cards and sections:
 
 ```tsx
-// Quick action icons, feature cards
-<Icon className="h-10 w-10 text-primary-400" />
-
-// Empty state icons (even more muted)
-<Icon className="h-16 w-16 text-gray-400 dark:text-gray-600" />
+<BarChart01 className="h-10 w-10 text-primary-400" />
 ```
 
 #### Navigation Icons
@@ -461,31 +479,52 @@ Navigation icons inherit text color from parent:
 <Icon className="h-5 w-5" /> // Inherits text-gray-700 dark:text-gray-300
 ```
 
+#### Empty State Icons
+
+Use muted colors for empty states and backgrounds:
+
+```tsx
+<Icon className="h-16 w-16 text-gray-400 dark:text-gray-600" />
+```
+
+#### Semantic Color Icons
+
+Use semantic colors for status/state icons:
+
+```tsx
+<Icon className="h-5 w-5 text-success-500" />  // Success
+<Icon className="h-5 w-5 text-error-500" />    // Error
+<Icon className="h-5 w-5 text-warning-500" />  // Warning
+```
+
 ### Icon Usage Examples
 
 ```tsx
-// Untitled UI icons (preferred)
-import { Lightbulb01 } from '@untitledui/icons'
-<Lightbulb01 className="h-10 w-10 text-primary-400" />
+// Feature card icon (correct)
+import { BarChart01 } from '@untitledui/icons';
+<BarChart01 className="h-10 w-10 text-primary-400" />
 
-// HeroIcons (legacy/navigation only)
-<svg
-  className="h-5 w-5 text-gray-600 dark:text-gray-400 flex-shrink-0"
-  fill="none"
-  viewBox="0 0 24 24"
-  stroke="currentColor"
->
-  {/* Icon path */}
-</svg>
+// Navigation icon (inherits color from parent)
+import { Settings01 } from '@untitledui/icons';
+<div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+  <Settings01 className="h-5 w-5" />
+  <span>Settings</span>
+</div>
+
+// Status icon
+import { CheckCircle01 } from '@untitledui/icons';
+<CheckCircle01 className="h-5 w-5 text-success-500" />
 ```
 
 ### Icon Replacement Guidelines
 
 ✅ **DO**: Use Untitled UI icons for all new components
-✅ **DO**: Replace emojis with appropriate Untitled UI icons
-✅ **DO**: Use `text-primary-400` for featured/action icons
+✅ **DO**: Replace ALL emojis with appropriate Untitled UI icons
+✅ **DO**: Use `text-primary-400` for featured/action icons in cards
 ✅ **DO**: Use `text-gray-400 dark:text-gray-600` for empty state icons
-❌ **DON'T**: Use emojis in production UI
+✅ **DO**: Check [@untitledui/icons icon gallery](https://www.untitledui.com/icons) for available icons
+❌ **DON'T**: Use emojis in production UI (NEVER)
+❌ **DON'T**: Use any icon library other than @untitledui/icons
 ❌ **DON'T**: Mix icon libraries in the same component
 ❌ **DON'T**: Use overly saturated colors like `text-primary-500` or `text-primary-600` for icons
 
